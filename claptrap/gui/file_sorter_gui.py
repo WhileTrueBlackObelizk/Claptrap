@@ -4,7 +4,7 @@
 # ------------------------------------------------------------
 import tkinter as tk
 from tkinter import filedialog, messagebox
-from core.file_sorter import sort_files
+from claptrap.core.file_sorter import sort_files
 
 def create_file_sorter_frame(root, rules):
     """

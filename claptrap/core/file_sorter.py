@@ -4,7 +4,7 @@
 # ------------------------------------------------------------
 import os
 import shutil
-from utils.helpers import ensure_folder
+from claptrap.utils.helpers import ensure_folder
 
 def get_files_in_folder(folder):
     """

@@ -5,7 +5,7 @@
 
 import tkinter as tk
 from tkinter import messagebox, simpledialog
-from core.rule_manager import add_rule, edit_rule, delete_rule, save_rules
+from claptrap.core.rule_manager import add_rule, edit_rule, delete_rule, save_rules
 
 def create_rule_editor_frame(root, rules):
     """
@@ -36,7 +36,7 @@ def update_rule_list(rule_list, rules):
     rule_list.delete(0, tk.END)
     for k, v in rules.items():
         rule_list.insert(tk.END, f"{k} → {v['folder']} ({v['category']})")
-        color = "#FF6B6B" if v["category"] == "EÜR" else "#4CAF50"
+        color = "#81C784" if v["category"] == "EÜR" else "#E57373"
         rule_list.itemconfig(tk.END, {'fg': color})
 
 def add_rule_gui(rule_list, rules):
