@@ -6,36 +6,22 @@
 import json
 import os
 
-RULES_FILE = "rules.json"
+RULES_FILE = os.path.join(os.path.dirname(__file__), "..", "rules.json")
 
-# --------------------------
-# Regeln laden / speichern
+def load_rules(file_path=None):
+    """Lädt Regeln aus JSON-Datei."""
+    path = file_path if file_path else RULES_FILE
+    if not os.path.exists(path):
+        return {}
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
-def load_rules():
-    """
-    Lädt die Regeln aus rules.json.
-    Gibt ein Dictionary zurück.
-    """
-    if os.path.exists(RULES_FILE):
-        with open(RULES_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    # Standard-Regeln, falls Datei nicht existiert
-    return {
-        "rechnung": {"folder": "Rechnungen", "category": "EÜR"},
-        "beleg": {"folder": "Belege", "category": "EÜR"},
-        "kontoauszug": {"folder": "Kontoauszüge", "category": "EÜR"},
-        "steuer": {"folder": "Steuerunterlagen", "category": "EÜR"},
-        "gehalt": {"folder": "Gehalt", "category": "Privat"},
-        "versicherung": {"folder": "Versicherungen", "category": "Privat"},
-        "vertrag": {"folder": "Verträge", "category": "Privat"},
-    }
+def save_rules(rules, file_path=None):
+    """Speichert Regeln in JSON-Datei."""
+    path = file_path if file_path else RULES_FILE
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(rules, f, indent=4)
 
-def save_rules(rules):
-    """
-    Speichert das gegebene Regel-Dictionary in rules.json
-    """
-    with open(RULES_FILE, "w", encoding="utf-8") as f:
-        json.dump(rules, f, indent=4, ensure_ascii=False)
 
 # --------------------------
 # Regeln bearbeiten
