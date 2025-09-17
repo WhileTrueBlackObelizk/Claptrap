@@ -1,0 +1,30 @@
+{
+    "rechnung": {
+        "folder": "Rechnungen",
+        "category": "EÜR"
+    },
+    "beleg": {
+        "folder": "Belege",
+        "category": "EÜR"
+    },
+    "kontoauszug": {
+        "folder": "Kontoauszüge",
+        "category": "EÜR"
+    },
+    "steuer": {
+        "folder": "Steuerunterlagen",
+        "category": "EÜR"
+    },
+    "gehalt": {
+        "folder": "Gehalt",
+        "category": "Privat"
+    },
+    "versicherung": {
+        "folder": "Versicherungen",
+        "category": "Privat"
+    },
+    "vertrag": {
+        "folder": "Verträge",
+        "category": "Privat"
+    }
+}
