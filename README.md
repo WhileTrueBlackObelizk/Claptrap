@@ -1,6 +1,6 @@
-# Claptrap – Dokumentensortierer  
+# DATA-Wizard – Dokumentensortierer  
 
-Claptrap ist ein **smarter Dokumentensortierer** für Windows, Linux und macOS.  
+DATA-Wizard ist ein **smarter Dokumentensortierer** für Windows, Linux und macOS.  
 Er sortiert deine Dokumente automatisch in Unterordner – ideal für **EÜR-Unterlagen** (geschäftlich) und **private Dokumente**.
 
 ---
@@ -30,5 +30,5 @@ Er sortiert deine Dokumente automatisch in Unterordner – ideal für **EÜR-Unt
 1. Repository klonen oder den Projektordner herunterladen.  
 2. Terminal/Command Prompt öffnen und ins Projektverzeichnis wechseln:  
    ```bash
-   cd Claptrap
+   cd DATA-Wizard
 3. Starten mit: python main.py
